@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+  version="2.1">
+
+  <persistence-unit name="spring-dict-persistence">
+    <description>Hibernate with Entity Manager</description>
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>com.topica.model.ReleaseEntity</class>
+    <class>com.topica.model.ServiceEntity</class>
+      <class>com.topica.model.UsersEntity</class>
+      <class>com.topica.model.UserEntity</class>
+      <class>com.topica.model.User1Entity</class>
+
+      <properties>
+      <!-- Hibernate Configuration -->
+      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.format_sql" value="true" />
+      <property name="hibernate.dialect"
+        value="org.hibernate.dialect.MySQLDialect" />
+      <property name="toplink.jdbc.url" value="jdbc:h2:file:C:/Users/manhdung98/ormexp/database"/>
+      <property name="toplink.jdbc.driver" value="org.h2.Driver"/>
+      <property name="hibernate.connection.url" value="jdbc:h2:file:C:/Users/manhdung98/ormexp/database"/>
+      <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+      <property name="openjpa.ConnectionURL" value="jdbc:h2:file:C:/Users/manhdung98/ormexp/database"/>
+      <property name="openjpa.ConnectionDriverName" value="org.h2.Driver"/>
+      <property name="eclipselink.jdbc.url" value="jdbc:h2:file:C:/Users/manhdung98/ormexp/database"/>
+      <property name="eclipselink.jdbc.driver" value="org.h2.Driver"/>
+    </properties>
+  </persistence-unit>
+
+</persistence>
